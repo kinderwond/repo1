@@ -274,6 +274,8 @@ function getTransalteV2() {
         "linolenic_acid": "Ліноленова кислота",
         "omega_3_fatty_acids": "Омега-3 жирні кислоти",
         "omega_6_fatty_acids": "Омега-6 жирні кислоти",
-        "translated_name": "Перекладена назва"
+        "translated_name": "Перекладена назва",
+        "carbohydrates": "Вуглеводи",
+        "dietary_fiber": "Харчові волокна"
     }
 }
