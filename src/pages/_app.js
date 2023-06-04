@@ -276,6 +276,7 @@ function getTransalteV2() {
         "omega_6_fatty_acids": "Омега-6 жирні кислоти",
         "translated_name": "Перекладена назва",
         "carbohydrates": "Вуглеводи",
-        "dietary_fiber": "Харчові волокна"
+        "dietary_fiber": "Харчові волокна",
+        "trans_fats": "трансжири"
     }
 }
