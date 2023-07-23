@@ -29,20 +29,25 @@ const search = async (req, res) => {
     const {
         query,
         skip = 0,
-        limit = 100
+        limit = 100,
+        category
     } = req.query
     const col = await getCollection()
-    let filter = query ? {
+    let filter = query || category ? {
         translated_name: {
             $regex: query,
             $options: 'i'
-        }
+        },
+        category
     } : {}
 
-    const products = await col.find(filter).skip(skip)
-        .limit(limit)
+    const count  = await col.find(filter).count()
+    console.log('skiplimit', skip, limit)
+    const products = await col.find(filter).skip(+skip)
+        .limit(+limit)
         .toArray();
-    res.status(200).json(products);
+    console.log('skip limit', skip, limit)
+    res.status(200).json({products, count});
 }
 
 const update = async (req, res) => {
